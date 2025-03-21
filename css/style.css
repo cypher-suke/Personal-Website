@@ -1,198 +1,205 @@
 /* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #fff;
-    color: #333;
-  }
-  
-  h1, h2, h3, h4, h5 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    margin: 0 0 1rem;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
-  
-  /* HERO SECTION */
-  #hero {
-    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
-    padding: 6rem 2rem;
-    color: #fff;
-    text-align: left;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .hero-content h2 {
-    font-size: 1.8rem;
-    margin-top: 0.5rem;
-    font-weight: 500;
-  }
-  
-  .hero-content p {
-    margin-top: 1rem;
-    max-width: 500px;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #0073b1;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-  }
-  
-  /* ABOUT SECTION */
-  #about {
-    background-color: #f9f9f9;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #080908;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* HERO SECTION */
+#hero {
+  background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+  padding: 6rem 2rem;
+  color: #fff;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.hero-content p {
+  margin-top: 1rem;
+  max-width: 500px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0073b1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* ABOUT SECTION */
+#about {
+  background-color: #111;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-content img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+@media(min-width: 768px) {
   .about-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
   }
-  
-  .about-content img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-  }
-  
-  .about-text {
-    flex: 1;
-  }
-  
-  @media(min-width: 768px) {
-    .about-content {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-  
-  /* SERVICES SECTION */
-  #services {
-    background-color: #fff;
-    text-align: center;
-  }
-  
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .service-card {
-    padding: 2rem;
-    border-radius: 12px;
-    background-color: #f1f1f1;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  
-  .service-card i {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #0073b1;
-  }
-  
-  /* BLOG SECTION */
-  #blog {
-    background-color: #f9f9f9;
-  }
-  
-  .blog-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .blog-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  .blog-card h3 {
-    font-size: 1.2rem;
-  }
-  
-  .blog-card p {
-    font-size: 1rem;
-  }
-  
-  .blog-card a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #0073b1;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  /* CONTACT SECTION */
-  #contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 600px;
-    margin-top: 2rem;
-  }
-  
-  #contact input,
-  #contact textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  #contact button {
-    padding: 0.75rem;
-    background-color: #0073b1;
-    border: none;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  /* FOOTER */
-  footer {
-    background-color: #222;
-    color: #ccc;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  
-  footer a {
-    color: #ccc;
-    text-decoration: underline;
-    margin-left: 10px;
-    font-size: 0.9rem;
-  }
-  
-  .social-icons {
-    margin-top: 1rem;
-  }
-  
-  .social-icons a {
-    color: #ccc;
-    margin: 0 10px;
-    font-size: 1.2rem;
-    text-decoration: none;
-  }
-  
+}
+
+/* SERVICES SECTION */
+#services {
+  background-color: #080908;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.service-card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0073b1;
+}
+
+/* BLOG SECTION */
+#blog {
+  background-color: #111;
+}
+
+.blog-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blog-card {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.blog-card h3 {
+  font-size: 1.2rem;
+}
+
+.blog-card p {
+  font-size: 1rem;
+}
+
+.blog-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0073b1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* CONTACT SECTION */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#contact button {
+  padding: 0.75rem;
+  background-color: #0073b1;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  color: #ccc;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: underline;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
