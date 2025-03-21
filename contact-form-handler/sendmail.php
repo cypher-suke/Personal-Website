@@ -1,7 +1,23 @@
 <?php
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Validate CSRF token
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        http_response_code(403);
+        echo "Invalid CSRF token.";
+        exit;
+    }
+
+    // Honeypot anti-spam field
+    if (!empty($_POST['company'])) {
+        http_response_code(403);
+        echo "Spam detected.";
+        exit;
+    }
+
     // Collect and sanitize form data
-    $name = strip_tags(trim($_POST["name"]));
+    $name = preg_replace("/[\r\n]+/", "", strip_tags(trim($_POST["name"])));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $subject = strip_tags(trim($_POST["subject"]));
     $message = trim($_POST["message"]);
@@ -14,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Email settings
-    $to = "jarrel.thomas@gmail.com"; 
+    $to = "you@example.com"; // Replace with your own email address
     $email_subject = "New Contact Form Submission: $subject";
     $email_body = "Name: $name\n";
     $email_body .= "Email: $email\n\n";
