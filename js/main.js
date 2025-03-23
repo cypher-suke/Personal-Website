@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const fadeElements = document.querySelectorAll('.fade-in');
+    const aboutImage = document.querySelector('.about-image');
+    const aboutText = document.querySelector('.about-text');
   
     const options = {
       threshold: 0.1
@@ -18,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(el);
     });
   
+    if (aboutImage) observer.observe(aboutImage);
+    if (aboutText) observer.observe(aboutText);
+  
     // Handle contact form submission with security enhancements
     const form = document.getElementById('contact-form');
     const status = document.getElementById('form-status');
@@ -28,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
         const formData = new FormData(form);
   
-        // CSRF Token (Optional - should be set on server and injected into the form)
         const csrfToken = document.querySelector('meta[name="csrf-token"]');
         if (csrfToken) {
           formData.append('csrf_token', csrfToken.getAttribute('content'));
@@ -38,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const response = await fetch(form.action, {
             method: form.method,
             body: formData,
-            credentials: 'same-origin', // Same-origin policy enforcement
+            credentials: 'same-origin',
             headers: {
               'Content-Security-Policy': "default-src 'self'",
               'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
@@ -46,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
   
           const resultText = await response.text();
-          const sanitizedText = resultText.replace(/</g, "&lt;").replace(/>/g, "&gt;"); // Basic XSS sanitization
+          const sanitizedText = resultText.replace(/</g, "&lt;").replace(/>/g, "&gt;");
           status.textContent = sanitizedText;
           status.style.marginTop = '1rem';
   
@@ -62,5 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-  });
+  
+    // Show navbar on scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('visible');
+      } else {
+        navbar.classList.remove('visible');
+      }
+    });
+  });  
   

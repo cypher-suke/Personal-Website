@@ -7,82 +7,76 @@
   <title>Your Name | Security Analyst</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Epilogue&display=swap" rel="stylesheet">
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <div class="logo">Your Name</div>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
   <!-- HERO SECTION -->
-  <header id="hero" class="fade-in">
+  <header id="hero" class="full-page-section">
     <div class="container hero-content">
-      <h1>Your Name</h1>
+      <h1>Jarrel Thomas</h1>
       <h2>Security Analyst</h2>
-      <p>Helping individuals and businesses stay secure in a digital world.</p>
+      <p>Helping organizations detect threats, maintain compliance
+        and strengthen security posture through actionable analysis and operational excellence.</p>
       <a href="#contact" class="cta-button">Contact Me</a>
     </div>
+    <a href="#about" class="scroll-arrow"><i class="fas fa-chevron-down"></i></a>
   </header>
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="fade-in">
+  <section id="about" class="full-page-section fade-in">
     <div class="container about-content">
-      <img src="images/your-photo.jpg" alt="Your Name">
+      <div class="about-image">
+        <img src="images/about-pic.jpg" alt="Your Name" />
+      </div>
       <div class="about-text">
         <h2>About Me</h2>
-        <p>I'm a cybersecurity analyst with a passion for protecting systems and empowering others through knowledge and innovation.</p>
+        <p>I’m Jarrel Thomas — a cybersecurity analyst with experience in incident response, audit readiness, and risk management. Currently, I serve at Twilio as a support technician in email where I investigate email threats, support SOC 2 compliance, and strengthened threat monitoring processes. In previous positions I’ve held, I have implemented ISO 27001 access controls and upgraded systems to meet federal security standards.
+
+          In addition, I am a strong advocate for advancing diversity in technology and cybersecurity. I regularly publish articles on Linkedin regarding cybersecurity news, emerging threats, and policy developments, but feel free to read them here as well.</p>
       </div>
     </div>
-  </section>
+  </section>  
 
   <!-- SERVICES SECTION -->
-  <section id="services" class="fade-in">
+  <section id="services" class="full-page-section fade-in">
     <div class="container">
-      <h2>My Specialties</h2>
+      <h2>My Services</h2>
       <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-shield-alt"></i>
+        <div class="service-card fade-in">
+          <i class="fas fa-shield-alt service-icon"></i>
           <h3>Cybersecurity Consulting</h3>
-          <p>Helping businesses build secure infrastructure and practices.</p>
+          <p>Helping businesses identify risks and implement effective security solutions.</p>
         </div>
-        <div class="service-card">
-          <i class="fas fa-network-wired"></i>
+        <div class="service-card fade-in">
+          <i class="fas fa-network-wired service-icon"></i>
           <h3>Network Security</h3>
-          <p>Analyzing and securing networks to prevent unauthorized access.</p>
+          <p>Building robust networks that protect against internal and external threats.</p>
         </div>
-        <div class="service-card">
-          <i class="fas fa-user-lock"></i>
+        <div class="service-card fade-in">
+          <i class="fas fa-bug service-icon"></i>
           <h3>Threat Analysis</h3>
-          <p>Identifying vulnerabilities and threats through proactive assessments.</p>
+          <p>Proactive analysis to discover vulnerabilities before attackers do.</p>
         </div>
-        <div class="service-card">
-          <i class="fas fa-laptop-code"></i>
-          <h3>Security Training</h3>
-          <p>Educating users and teams on best cybersecurity practices.</p>
+        <div class="service-card fade-in">
+          <i class="fas fa-user-shield service-icon"></i>
+          <h3>Security Awareness Training</h3>
+          <p>Training individuals and teams to recognize and defend against cyber threats.</p>
         </div>
       </div>
     </div>
-  </section>
+  </section>  
 
   <!-- BLOG SECTION -->
-  <section id="blog" class="fade-in">
+  <section id="blog" class="full-page-section">
     <div class="container">
       <h2>Latest Articles</h2>
       <div class="blog-cards">
@@ -106,10 +100,10 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="fade-in">
+  <section id="contact" class="full-page-section">
     <div class="container">
-      <h2>Contact Me</h2>
-      <form action="contact-form-handler/sendmail.php" method="POST">
+      $1<form id="contact-form" action="contact-form-handler/sendmail.php" method="POST">
+        <input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email Address" required>
         <input type="text" name="subject" placeholder="Subject" required>
@@ -120,7 +114,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="fade-in">
+  <footer>
     <div class="container footer-content">
       <p>&copy; 2025 Your Name. All rights reserved.</p>
       <a href="#">Privacy Policy</a>
