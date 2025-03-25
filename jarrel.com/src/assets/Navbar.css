@@ -1,0 +1,50 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(8, 9, 8, 0.7);
+    /* transparent using your black (#080908) */
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.nav-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #E5E7E6;
+    /* light gray from palette */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #E5E7E6;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #B80C09;
+    /* accent red */
+}

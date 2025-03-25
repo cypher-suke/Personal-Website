@@ -1,0 +1,43 @@
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #E5E7E6;
+    /* Light gray from your palette */
+    padding: 0 1rem;
+}
+
+.hero-content {
+    background-color: rgba(8, 9, 8, 0.6);
+    /* dark overlay for contrast */
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #B80C09;
+    /* Accent red */
+}
+
+.hero-text {
+    font-family: 'Ooh Baby', cursive;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
