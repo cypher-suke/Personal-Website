@@ -1,0 +1,29 @@
+.about-section {
+    background-color: #080908;
+    /* black from your palette */
+    color: #E5E7E6;
+    /* light gray text */
+    padding: 3rem 1.5rem;
+    /* reduced padding */
+}
+
+.about-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.about-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.about-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}

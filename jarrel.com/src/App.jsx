@@ -1,5 +1,9 @@
 import './App.css';
-import Hero from './assets/Hero'; // Import your Hero section
+import About from './assets/About';
+import Articles from './assets/Articles';
+import Contact from './assets/Contact';
+import Footer from './assets/Footer'; // Import Footer section
+import Hero from './assets/Hero';
 import Navbar from './assets/Navbar';
 
 function App() {
@@ -7,6 +11,10 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <About />
+      <Articles />
+      <Contact />
+      <Footer /> {/* Footer appears last */}
     </>
   );
 }
